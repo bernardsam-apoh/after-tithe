@@ -1,16 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="js/functions.js" defer></script>
     <script src="js/script.js" defer></script>
 
     <title>Index | After Tithe</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <input id="amount" type="text"  style="padding: 10px 20px; font-size: 32px; width: 100%">
+    <div id="tithe"></div>
+    <div id="remaining-amount"></div>
+    <div id="expenses"></div>
+    <div id="investments"></div>
+    <div id="savings"></div>
+    <div id="utilities"></div>
+    <div id="extra"></div>
+
+    <br><br>
+
+    <label for="expanses-percent">Expaneses</label>
+    <select id="expanses-percent">
+      <option value="0">Choose percentage</option>
+      <option value="100">100</option>
+      <option value="90">90</option>
+      <option value="80">80</option>
+      <option value="70">70</option>
+      <option value="60">60</option>
+      <option value="50">50</option>
+      <option value="40">40</option>
+      <option value="30">30</option>
+      <option value="20">20</option>
+      <option value="10">10</option>
+    </select>
+
+    <label for="savings-percent">Savings</label>
+    <select id="savings-percent">
+      <option value="0">Choose percentage</option>
+      <option value="100">100</option>
+      <option value="90">90</option>
+      <option value="80">80</option>
+      <option value="70">70</option>
+      <option value="60">60</option>
+      <option value="50">50</option>
+      <option value="40">40</option>
+      <option value="30">30</option>
+      <option value="20">20</option>
+      <option value="10">10</option>
+    </select>
+
+    <label for="investments-percent">Investments</label>
+    <select id="investments-percent">
+      <option value="0">Choose percentage</option>
+      <option value="100">100</option>
+      <option value="90">90</option>
+      <option value="80">80</option>
+      <option value="70">70</option>
+      <option value="60">60</option>
+      <option value="50">50</option>
+      <option value="40">40</option>
+      <option value="30">30</option>
+      <option value="20">20</option>
+      <option value="10">10</option>
+    </select>
+
+    <label for="utilities-percent">Investments</label>
+    <select id="utilities-percent">
+      <option value="0">Choose percentage</option>
+      <option value="100">100</option>
+      <option value="90">90</option>
+      <option value="80">80</option>
+      <option value="70">70</option>
+      <option value="60">60</option>
+      <option value="50">50</option>
+      <option value="40">40</option>
+      <option value="30">30</option>
+      <option value="20">20</option>
+      <option value="10">10</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="calcExpenses()">calculate</button>
+
+  </body>
 </html>
