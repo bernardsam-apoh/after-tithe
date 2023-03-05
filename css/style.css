@@ -1,0 +1,169 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: large;
+    background-color: #99d14c;
+    
+}
+
+.container {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.main {
+    height: 100svh;
+    background-color: #fff;
+    position: relative;
+}
+
+.input-container {
+    background-color: #B07800;
+    background-color: #D06500;
+    background-color: #8870E6;
+    background-color: #6955C7;
+    height: 12svh;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+}
+
+.amount-element {
+    width: 100%;
+    padding: .8em 1.5em;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+    letter-spacing: .05em;
+    background-color: #fff;
+}
+
+.content {
+    background-color: #fff;
+    min-height: 75svh;
+    padding-top: 1em;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: rgb(19, 18, 18);
+}
+
+.content > aside {
+    margin-bottom: 1em;
+    padding: .3em 0;
+    padding-left: .5em;
+    
+    /* box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2); */
+}
+
+.remaining-amount {
+    background-color: #8870e6;
+    border-radius: 13px;
+    color: #FFCA60;
+}
+
+.remaining-amount .heading {
+    color: #FFCA60;
+}
+
+.remaining-amount .value {
+    color: #fff;
+}
+
+.heading {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: unset;
+    padding-bottom: 1em;
+    text-transform: capitalize;
+    color: #494454;
+
+}
+
+.value {
+    font-size: 3rem;
+    color: #001176;
+}
+
+.reactions {
+    gap: 1em; 
+    align-items: flex-end;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1em 1em;
+}
+
+.calc-button {
+    width: 75vw;
+    padding: .8em 0;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 2rem;
+    text-transform: capitalize;
+    border: none;
+    background-color: #FF9A77;
+    color: #fff;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.setting-button {
+    background-color: #68BAA6;
+    padding: 1.2em;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+}
+
+.fa {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.setting-panel {
+    background-color: #fff;
+    position: absolute;
+    top: 15svh;
+    height: 70svh;
+    width: 100%;
+    padding: 0 1em;
+}
+
+.panel-wrapper {
+    display: grid;
+    margin-bottom: 1em;
+}
+
+.setting-panel label {
+    padding: .8em 0;
+    font-size: 1.6rem;
+    padding-left: 1.5em;
+}
+
+.setting-panel select {
+    padding: .8em 0;
+    font-size: 2rem;
+    padding-left: 1em;
+    border: none;
+    border-radius: 7px;
+}
+
+
+
+
