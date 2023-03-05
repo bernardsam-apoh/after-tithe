@@ -24,7 +24,6 @@
     <main class="main">
       <section class="input-container">
         <input
-          onfocus="clear()"
           id="amount-element"
           class="amount-element"
           placeholder="Input amount"
@@ -32,31 +31,34 @@
         />
       </section>
 
-      <section id="content" class="content container" style="display: none">
-        <aside>
-          <div class="heading">Tithe</div>
-          <div id="tithe-element" class="value"></div>
-        </aside>
-        <aside class="remaining-amount" style="padding: 0.9em 0.5em">
-          <div class="heading">Remaining amount</div>
-          <div id="remaining-amount-element" class="value"></div>
-        </aside>
-        <aside>
-          <div class="heading">Expanses</div>
-          <div id="expenses-element" class="value"></div>
-        </aside>
-        <aside>
-          <div class="heading">Savings</div>
-          <div id="savings-element" class="value"></div>
-        </aside>
-        <aside>
-          <div class="heading">Investments</div>
-          <div id="investments-element" class="value"></div>
-        </aside>
-        <aside>
-          <div class="heading">Ultilities</div>
-          <div id="utilities-element" class="value"></div>
-        </aside>
+      <section id="content" class="content container" style="display: none ">
+        <div id="message" class="message"></div>
+        <div id="display" class="display">
+          <aside>
+            <div class="heading">Tithe</div>
+            <div id="tithe-element" class="value"></div>
+          </aside>
+          <aside class="remaining-amount" style="padding: 0.9em 0.5em">
+            <div class="heading">Remaining amount</div>
+            <div id="remaining-amount-element" class="value"></div>
+          </aside>
+          <aside>
+            <div class="heading">Expanses</div>
+            <div id="expenses-element" class="value"></div>
+          </aside>
+          <aside>
+            <div class="heading">Savings</div>
+            <div id="savings-element" class="value"></div>
+          </aside>
+          <aside>
+            <div class="heading">Investments</div>
+            <div id="investments-element" class="value"></div>
+          </aside>
+          <aside>
+            <div class="heading">Ultilities</div>
+            <div id="utilities-element" class="value"></div>
+          </aside>
+        </div>
       </section>
 
       <section class="reactions">
@@ -66,7 +68,7 @@
         </button>
       </section>
 
-      <section id="setting-panel" class="setting-panel" style="display: ">
+      <section id="setting-panel" class="setting-panel" style="display: none">
         <div class="panel-wrapper">
           <label for="expanses-percent">Expenses</label>
           <select id="expanses-percent">

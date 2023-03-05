@@ -1,12 +1,11 @@
 'use strict'
 
-amountElement.addEventListener('focus', (e) => {
-    console.log('Input element in focus')
-    // messageElement.textContent = ''
+amountElement.addEventListener('focus', e => {
     e.target.value = ''
-    content.style.display = 'none'
     clearElements()
     clearPercentages()
+    display.style.display = 'none'
+    message.style.display = 'none'
 })
 
 settingButton.addEventListener('click', () => {
@@ -17,32 +16,34 @@ settingButton.addEventListener('click', () => {
       }
 })
 
+
 const calcExpenses = () => {
-    const { expansesPercent, savingsPercent, investmentPercent, utilitiesPercent, totalPercent } = percentageSettings()
-    const isPercentAvailable = expansesPercent || savingsPercent || investmentPercent || utilitiesPercent
+    const { expensesPercent, savingsPercent, investmentPercent, utilitiesPercent, totalPercent } = percentageSettings()
+    const isPercentAvailable = expensesPercent || savingsPercent || investmentPercent || utilitiesPercent
     const amount = Number(amountElement.value)
 
-    settingPanel.style.display = 'none'
+    content.style.display = 'block'
 
-    if(isNaN(amount)) {
-        showContent()
-        content.textContent = 'Input cannot be string'
-    } else if (amount === 0) {
-        showContent()
-        content.textContent = 'Input cannot be empty'
-    } else if (isPercentAvailable && totalPercent <= 100) {
-        renderExpenesesDom(amount, expansesPercent, savingsPercent, investmentPercent, utilitiesPercent)
-        showContent()
-    } else if (isPercentAvailable && totalPercent > 100) {
-        content.textContent = 'Percentages are more than 100%'
-        showContent()
-        clearElements()
-    }  else {
+    if ( isNaN(amount) ) {
+        console.log('amount is string')
+        message.style.display = 'block'
+        display.style.display = 'none'
+        message.textContent = 'Please input an amount'
+    } else if ( amount === 0 ) {
+        message.style.display = 'block'
+        message.textContent = 'Amount is required'
+        display.style.display = 'none'
+    } else if ( isPercentAvailable && totalPercent > 100 ) {
+        message.style.display = 'block'
+        display.style.display = 'none'
+        message.textContent = 'Percentages are more than 100%'
+    } else if ( isPercentAvailable && totalPercent <= 100 ) {
+        display.style.display = 'block'
+        renderExpenesesDom(amount, expensesPercent, savingsPercent, investmentPercent, utilitiesPercent)
+        message.style.display = 'none'
+    }   else {
+        display.style.display = 'block'
         renderExpenesesDom(amount)
-        showContent()
+        message.style.display = 'none'
     }
-
-
 }
-
-

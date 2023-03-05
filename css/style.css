@@ -31,6 +31,26 @@ body {
     position: relative;
 }
 
+.message {
+    color: #E868CB;
+    font-size: 2rem;
+    margin-top: 1em;
+    letter-spacing: -1.3px;
+    word-spacing: 2px;
+    
+    min-height: 70svh;
+}
+
+.display {
+    background-color: #fff;
+    min-height: 75svh;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: rgb(19, 18, 18);
+}
+
 .input-container {
     background-color: #B07800;
     background-color: #D06500;
@@ -53,16 +73,9 @@ body {
     background-color: #fff;
 }
 
-.content {
-    background-color: #fff;
-    min-height: 75svh;
-    padding-top: 1em;
-    font-size: 2rem;
-    font-weight: bolder;
-    color: rgb(19, 18, 18);
-}
 
-.content > aside {
+
+.display > aside {
     margin-bottom: 1em;
     padding: .3em 0;
     padding-left: .5em;

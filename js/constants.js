@@ -1,8 +1,10 @@
 'use strict'
 
+const message = document.querySelector('#message')
 const settingButton = document.querySelector('#setting-button')
 const settingPanel = document.querySelector('#setting-panel')
 const content = document.querySelector('#content')
+const display = document.querySelector('#display')
 
 const amountElement = document.querySelector('#amount-element')
 const titheElement = document.querySelector('#tithe-element')

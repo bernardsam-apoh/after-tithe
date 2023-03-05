@@ -1,23 +1,35 @@
 'use strict'
 
-const showContent = () => {
-    content.style.display = 'block'
-}
-
 const percentageSettings = () => {
-    const expansesPercent = Number(expansesPercentOption.value)
+    const expensesPercent = Number(expansesPercentOption.value)
     const savingsPercent = Number(savingsPercentOption.value)
     const investmentPercent = Number(investmentPercentOption.value)
     const utilitiesPercent = Number(utilitiesPercentOption.value)
-    const totalPercent = expansesPercent + savingsPercent + investmentPercent + utilitiesPercent
+    const totalPercent = expensesPercent + savingsPercent + investmentPercent + utilitiesPercent
 
-    return { expansesPercent, savingsPercent, investmentPercent, utilitiesPercent, totalPercent }
+    return { expensesPercent, savingsPercent, investmentPercent, utilitiesPercent, totalPercent }
 }
 
-const renderExpenesesDom = (amount, expansesPercent=50, savingsPercent=20, investmentPercent=20, utilitiesPercent=10) => {
+const clearElements = () => {
+    titheElement.textContent = ''
+    remainingAmountElement.textContent = ''
+    expensesElement.textContent = ''
+    savingsElement.textContent = ''
+    investmentsElement.textContent = ''
+    utilitiesElement.textContent = ''
+}
+
+const clearPercentages = () => {
+    expansesPercentOption.value = ''
+    savingsPercentOption.value = ''
+    investmentPercentOption.value = ''
+    utilitiesPercentOption.value = ''
+}
+
+const renderExpenesesDom = (amount, expensesPercent=50, savingsPercent=20, investmentPercent=20, utilitiesPercent=10) => {
     const tithe = amount * 0.1
     const remainingAmount = amount - tithe
-    const expenses = remainingAmount * (expansesPercent / 100)
+    const expenses = remainingAmount * (expensesPercent / 100)
     const savings = remainingAmount * (savingsPercent / 100)
     const investments = remainingAmount * (investmentPercent / 100)
     const utilities = remainingAmount * (utilitiesPercent / 100)
@@ -29,23 +41,3 @@ const renderExpenesesDom = (amount, expansesPercent=50, savingsPercent=20, inves
     investmentsElement.textContent = `GH ${investments.toFixed(2)}`
     utilitiesElement.textContent = `GH ${utilities.toFixed(2)}`
 }
-
-const clearElements = () => {
-    // amountElement.value = ''
-    titheElement.textContent = ''
-    remainingAmountElement.textContent = ''
-    expensesElement.textContent = ''
-    savingsElement.textContent = ''
-    investmentsElement.textContent = ''
-    utilitiesElement.textContent = ''
-    // messageElement.textContent = ''
-}
-
-const clearPercentages = () => {
-    expansesPercentOption.value = ''
-    savingsPercentOption.value = ''
-    investmentPercentOption.value = ''
-    utilitiesPercentOption.value = ''
-}
-
-
