@@ -10,9 +10,11 @@ amountElement.addEventListener('focus', e => {
 
 settingButton.addEventListener('click', () => {
     if (settingPanel.style.display === "none") {
-        settingPanel.style.display = "block";
+        settingPanel.style.display = "block"
+        content.style.backgroundColor = '#ffe3b3'
       } else {
         settingPanel.style.display = "none";
+        content.style.backgroundColor = '#fff'
       }
 })
 
