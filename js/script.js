@@ -26,6 +26,12 @@ const calcExpenses = () => {
 
     content.style.display = 'block'
 
+    if (settingPanel.style.display === "block") {
+        settingPanel.style.display = "none"
+        content.style.display = 'block'
+        content.style.backgroundColor = '#fff'
+      }
+
     if ( isNaN(amount) ) {
         console.log('amount is string')
         message.style.display = 'block'
